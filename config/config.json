@@ -1,0 +1,14 @@
+{
+    "port": 8080,
+    "secret": "secretKey",
+    "mongoose": {
+        "uri": "mongodb://localhost/url-shortener",
+        "options": {
+            "server": {
+                "socketOptions": {
+                    "keepAlive": 1
+                }
+            }
+        }
+    }
+}
