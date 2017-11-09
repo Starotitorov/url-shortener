@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 const config = require('./config');
 const Url = require('./models/Url');
@@ -12,6 +13,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(require('./middleware/sendHttpError'));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views/index.html'));
+});
 
 app.post('/api/shorten', (req, res, next) => {
     const longUrl = req.body.url;
@@ -44,10 +51,11 @@ app.post('/api/shorten', (req, res, next) => {
     });
 });
 
-app.get('/:encoded', (req, res, next) => {
-    const docId = UrlShortener.parse(req.params.encoded);
+app.get('/:encodedId', (req, res, next) => {
+    const docId = UrlShortener.parse(req.params.encodedId);
 
     Url.findOne({ _id: docId }, (err, doc) => {
+
         if (err) {
             return next(err);
         }

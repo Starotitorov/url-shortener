@@ -1,0 +1,42 @@
+body {
+    height: 100%;
+    background-color: #e9ecef;
+}
+
+.main {
+    margin-top: 150px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-icon {
+    margin-bottom: 24px;
+    font-size: 2.5em !important;
+}
+
+.enter-url-form {
+    margin-bottom: 24px;
+}
+
+.enter-url-form .url-input {
+    width: 600px;
+}
+
+.main .main__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 54px;
+}
+
+#short-url {
+    display: none;
+    margin: 0 auto;
+}
+
+#short-url a{
+    font-size: 1em;
+}
