@@ -12,6 +12,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Headers", "Origin, x-access-token, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 app.use(require('./middleware/sendHttpError'));
 
 app.use(express.static(path.join(__dirname, 'public')));
