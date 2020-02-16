@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema({
     _id: {
-        type: Number,
-        index: true
+        type: Number
     },
     longUrl: {
         type: String,

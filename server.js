@@ -9,6 +9,8 @@ const UrlShortener = require('./lib/UrlShortener');
 
 const app = express();
 
+app.enable('trust proxy');
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

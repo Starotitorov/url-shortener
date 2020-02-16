@@ -1,5 +1,5 @@
 $(function() {
-    $('.btn-shorten').on('click', function (e) {
+    $('.enter-url-form__btn').on('click', function (e) {
         e.preventDefault();
 
         var url = $('#url').val();
