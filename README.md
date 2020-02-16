@@ -1,2 +1,5 @@
 # url-shortener
-Simple URL shortener.
+
+URL shortener application written in JavaScript using Express.
+
+![Screenshot](screenshots/screenshot.png)
