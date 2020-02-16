@@ -5,32 +5,35 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
         <main class="main container-fluid">
-            <section class="main__header row">
-                <i class="fa fa-link fa-lg link-icon" aria-hidden="true"></i>
-                <h1>URL Shortener</h1>
-            </section>
-            <section class="row">
-                <form class="form-inline col-xs-12 enter-url-form">
-                    <div class="form-group mx-sm-3">
-                        <label for="url" class="sr-only">Url</label>
-                        <input type="text" class="form-control form-control-lg url-input" id="url" placeholder="Paste url here...">
-                    </div>
-                    <button class="btn btn-primary btn-lg btn-shorten">Shorten</button>
-                </form>
-            </section>
-            <h3 id="short-url" class="short-url"></h3>
+            <div class="row">
+                <div class="col-12 main__content">
+                    <i class="fa fa-link fa-lg link-icon" aria-hidden="true"></i>
+                    <h1 class="main__title">URL Shortener</h1>
+                    <form class="enter-url-form">
+                        <div class="form-group enter-url-form__url-form-group mr-sm-3 mb-xs-3 mb-sm-0">
+                            <label for="url" class="sr-only">Url</label>
+                            <input type="text" class="form-control form-control-lg enter-url-form__url-input" id="url" placeholder="Paste your long URL here">
+                        </div>
+                        <button class="btn btn-primary btn-lg enter-url-form__btn">
+                            Shorten
+                        </button>
+                    </form>
+                    <div id="short-url"></div>
+                </div>
+            </div>
         </main>
         <script
-                src="https://code.jquery.com/jquery-3.2.1.min.js"
-                integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-                crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <script src="https://use.fontawesome.com/9f06d22935.js"></script>
         <script src="scripts/script.js"></script>
     </body>

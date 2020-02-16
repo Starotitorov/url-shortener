@@ -4,15 +4,13 @@ const uri = process.env.NODE_ENV === 'production'
 
 module.exports = {
     port: 3000,
-    secret: "secretKey",
     mongoose: {
         uri,
         options: {
-            server: {
-                socketOptions: {
-                    keepAlive: 1
-                }
-            }
+            keepAlive: true,
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useFindAndModify: false
         }
     }
 };
